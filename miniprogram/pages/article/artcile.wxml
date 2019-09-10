@@ -1,0 +1,23 @@
+<!--pages/article/artcile.wxml-->
+<import src="./article-item/article-item.wxml"/>
+<view>
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="true" interval="3000" duration="500" circular="true" easing-function="easeInOutCubic">
+      <swiper-item>
+        <image src="/images/img1.jpg" class="slide-image"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="/images/img2.jpg" class="slide-image"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="/images/img3.jpg" class="slide-image"/>
+      </swiper-item>
+  </swiper>
+  <view class='article-wrap'>
+    <block wx:for="{{articles}}" wx:for-index="idx" wx:for-item="article" wx:key="idx">
+      <view catchtap='tapArticleItem' data-article-id='{{article.articleId}}'>
+        <template is="articleItem" data="{{...article}}"/>
+      </view>
+    </block>
+  </view>      
+</view>

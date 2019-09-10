@@ -1,0 +1,8 @@
+<import src="../star-templete/star.wxml"/>
+<template name="movieItem">       
+  <view class='movie-item-wrap'>
+    <image class='cover-img' src='{{images}}'></image>
+    <text class='title'>{{title}}</text>
+    <template is="star" data="{{score:score,stars:stars}}" />
+  </view>
+</template>  
