@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "antd": "^3.21.4",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "immutable": "^4.0.0-rc.12",
     "logger": "0.0.1",
     "react": "^16.9.0",
